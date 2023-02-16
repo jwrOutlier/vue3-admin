@@ -2,7 +2,7 @@
  * @Author: Cooper
  * @Date: 2023-02-09 15:14:47
  * @LastEditors: chenw 11111@qq.com
- * @LastEditTime: 2023-02-15 09:56:48
+ * @LastEditTime: 2023-02-16 11:18:54
  * @FilePath: \vue3-temp\src\components\EarthComponent\app.ts
  * @Description: 整个模型的入口文件
  *
@@ -88,8 +88,8 @@ export default class Earth implements IEarth {
     os.enablePan = false // 不禁止鼠标平移, 可以用键盘来平移
 
     // 引入性能查看器
-    this.stats = new Stats()
-    document.body.appendChild(this.stats.domElement)
+    // this.stats = new Stats()
+    // document.body.appendChild(this.stats.domElement)
 
     this.animate()
   }
@@ -97,7 +97,7 @@ export default class Earth implements IEarth {
   private animate = () => {
     requestAnimationFrame(this.animate)
     // 测量帧率
-    this.stats.update()
+    // this.stats.update()
     // 渲染
     this.initRenderer.render(this.initScence, this.initCamera)
   }

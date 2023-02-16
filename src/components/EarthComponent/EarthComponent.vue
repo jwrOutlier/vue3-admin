@@ -1,5 +1,5 @@
 <template>
-  <div class="EarthCom">
+  <div class="earth-component">
     <div style="width: 100%; height: 100%" id="earth-container"></div>
   </div>
 </template>
@@ -23,7 +23,7 @@ onMounted(() => {
 })
 </script>
 <style scoped lang="scss">
-.EarthCom {
-  height: 100vh;
+.earth-component {
+  height: 100%;
 }
 </style>

@@ -1,5 +1,5 @@
 export interface IDefaultOptions {
-  backgroundColor: number
+  backgroundColor: number|string
   defaultSatelliteColor: number
 }
 
@@ -9,7 +9,7 @@ export interface IDefaultStationOptions {
 }
 
 export const defaultOptions: IDefaultOptions = {
-  backgroundColor: 0x041119,
+  backgroundColor: '#fff',
   defaultSatelliteColor: 0xff0000,
 }
 
