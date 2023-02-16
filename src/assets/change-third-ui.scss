@@ -1,0 +1,19 @@
+.side-menu:not(.n-menu--collapsed) {
+  .n-menu-item-content {
+    &::before {
+      left: 5px;
+      right: 5px;
+    }
+    &.n-menu-item-content--selected,
+    &:hover {
+      &::before {
+        border-left: 4px solid var(--primary-theme);
+      }
+    }
+    .n-menu-item-content-header {
+      &:hover {
+        color: var(--primary-theme);
+      }
+    }
+  }
+}

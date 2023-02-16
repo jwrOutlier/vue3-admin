@@ -25,5 +25,6 @@ onMounted(() => {
 <style scoped lang="scss">
 .earth-component {
   height: 100%;
+  border: 1px solid var(--border-color);
 }
 </style>

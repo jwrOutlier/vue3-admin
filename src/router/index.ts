@@ -3,9 +3,9 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const adminChildRoute: RouteRecordRaw[] = [
   {
-    path: '/earth',
-    name: 'earth',
-    component: () => import('@/views/admin/EarthCom.vue'),
+    path: '/threeJs',
+    name: 'threeJs',
+    component: () => import('@/views/admin/ThreeCom.vue'),
   },
 ]
 const router = createRouter({
@@ -21,7 +21,7 @@ const router = createRouter({
       name: 'admin',
       component: () => import('../views/admin/Admin.vue'),
       redirect: {
-        path: '/earth',
+        path: '/threeJs',
       },
       children: adminChildRoute,
     },

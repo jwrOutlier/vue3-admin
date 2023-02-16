@@ -18,5 +18,9 @@ const props = withDefaults(defineProps<ITilteProp>(), {
   font-size: 20px;
   padding:10px 30px;
   box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 </style>

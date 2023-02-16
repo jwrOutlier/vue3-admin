@@ -1,5 +1,5 @@
 export interface IDefaultOptions {
-  backgroundColor: number|string
+  backgroundColor: number | string
   defaultSatelliteColor: number
 }
 
@@ -19,4 +19,4 @@ export const defaultStationOptions: IDefaultStationOptions = {
 }
 
 // 世界轮廓线段
-export const countryLineColor:number = 0x7aa5a5
+export const countryLineColor: number = 0x7aa5a5

@@ -30,8 +30,10 @@ import AdminConHeader from './AdminConHeader.vue'
   .admin-container {
     flex: 1;
     .content {
-      height: calc(100vh - 70px);
+      height: calc(100vh - 65px);
       overflow-y: auto;
+      padding: 15px;
+      box-sizing: border-box;
     }
   }
 }
