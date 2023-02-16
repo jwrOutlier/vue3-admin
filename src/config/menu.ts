@@ -1,47 +1,36 @@
-import type { MenuOption } from 'naive-ui'
-import { h } from 'vue'
-import { RouterLink } from 'vue-router'
-export const adminMenu: MenuOption[] = [
+interface menuChildren extends menuOption {}
+interface menuOption<T = menuChildren> {
+  key: string
+  label: string
+  icon?: string
+  children?: T[]
+}
+
+export const adminMenu: menuOption[] = [
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'threeJs',
-          },
-        },
-        {
-          default: () => 'threeJs组件',
-        }
-      ),
-    key: 'three',
+    key: 'compont1',
+    label: '组件',
+    icon: '',
   },
   {
-    label: '基础功能',
-    key: 'baseFunction',
+    key: 'compont2',
+    label: '组件',
+    icon: '',
+  },
+  {
+    key: 'compont3',
+    label: '组件',
+    icon: '',
+  },
+  {
+    key: 'compont4',
+    label: '组件',
+    icon: '',
     children: [
       {
-        label: '基础组件',
-        key: 'baseComponent',
-        href: '/login',
+        key: 'tableCom5',
+        label: '表格组件',
       },
     ],
-  },
-  {
-    label: '工作台',
-    key: 'wordbench2',
-  },
-  {
-    label: '工作台',
-    key: 'wordbench3',
-  },
-  {
-    label: '工作台',
-    key: 'wordbench4',
-  },
-  {
-    label: '工作台',
-    key: 'wordbench5',
   },
 ]

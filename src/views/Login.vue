@@ -6,27 +6,27 @@
       </div>
 
       <div class="login-center-r">
-        <h1>Vue3-admin</h1>
-        <n-input
-          class="user bgColor"
-          type="text"
-          size="large"
+        <div class="title">
+          <img src="../assets/images/vue-mastery-logo.png" alt="" />
+          <h1>Vue3-admin</h1>
+        </div>
+        <el-input
+          class="user"
           placeholder="请输入用户名"
-          v-model="state.username" />
-        <n-input
-          class="password bgColor"
-          size="large"
+          v-model="state.username"></el-input>
+        <el-input
+          class="password"
           placeholder="请输入密码"
           type="password"
-          show-password-on="click"
-          v-model="state.password" />
-        <n-button
-          color="#065b48"
+          v-model="state.password"
+          show-password></el-input>
+        <el-button
+          type="primary"
           class="login-btn"
           size="large"
           @click="handleLogin">
-          登录</n-button
-        >
+          登录
+        </el-button>
       </div>
     </div>
   </div>
@@ -34,24 +34,22 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
+import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
-import { useMessage } from 'naive-ui'
-
-const message = useMessage()
-const router = useRouter()
 const state = reactive({
   username: '',
   password: '',
 })
 
-const handleLogin = () => {
-  if (state.username === 'admin' && state.password === '123') {
-    router.push('/main')
-  } else {
-    message.warning('请输入正确的用户名和密码！')
-  }
-}
+const router = useRouter()
 
+const handleLogin = () => {
+  ElMessage({
+    type: 'success',
+    message: '登录成功',
+  })
+  router.push('/admin')
+}
 </script>
 <style scoped lang="scss">
 .Login {
@@ -67,8 +65,8 @@ const handleLogin = () => {
     width: 700px;
     height: 400px;
     display: flex;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
     .login-center-l {
       width: 50%;
       display: flex;
@@ -87,8 +85,16 @@ const handleLogin = () => {
       justify-content: center;
       padding: 0 30px;
       box-sizing: border-box;
-      h1 {
-        color: var(--primary-theme-text);
+      .title {
+        display: flex;
+        align-items: center;
+        img {
+          width: 75px;
+          margin-right: 10px;
+        }
+        h1 {
+          color: var(--primary-theme-text);
+        }
       }
       .user {
         margin: 30px 0;
@@ -96,10 +102,11 @@ const handleLogin = () => {
       .login-btn {
         width: 100%;
         margin-top: 30px;
+        background-color: var(--primary-theme);
+        border: none;
       }
-
-      .bgColor {
-        background-color: rgb(0, 0, 0);
+      :deep(.el-input__wrapper) {
+        background-color: transparent;
       }
     }
   }

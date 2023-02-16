@@ -1,10 +1,8 @@
 <template>
-  <n-message-provider>
-    <div class="APP">
-      <!-- <EarthComponent /> -->
-      <router-view />
-    </div>
-  </n-message-provider>
+  <div class="APP">
+    <!-- <EarthComponent /> -->
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts" setup>

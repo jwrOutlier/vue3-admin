@@ -5,9 +5,8 @@ const MinutesPerDay = 1440
 const ixpdotp = MinutesPerDay / (2.0 * 3.141592654)
 
 export default (station: any) => {
-    if (station.orbitMinutes > 0) return
-    // console.log(station)
-    
+  if (station.orbitMinutes > 0) return
+  // console.log(station)
 
   const revsPerDay = station.satrec.no * ixpdotp
   const intervalMinutes = 1
@@ -32,6 +31,8 @@ export default (station: any) => {
     transparent: true,
   })
   let orbitCurve = new THREE.Line(geometry, orbitMaterial)
+
+  orbitCurve.name = station.name
 
   return orbitCurve
 }

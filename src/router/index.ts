@@ -1,13 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
-const adminChildRoute: RouteRecordRaw[] = [
-  {
-    path: '/threeJs',
-    name: 'threeJs',
-    component: () => import('@/views/admin/ThreeCom.vue'),
-  },
-]
+const adminChildRoute: RouteRecordRaw[] = []
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -20,9 +14,6 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: () => import('../views/admin/Admin.vue'),
-      redirect: {
-        path: '/threeJs',
-      },
       children: adminChildRoute,
     },
   ],

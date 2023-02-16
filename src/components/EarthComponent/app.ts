@@ -2,7 +2,7 @@
  * @Author: Cooper
  * @Date: 2023-02-09 15:14:47
  * @LastEditors: chenw 11111@qq.com
- * @LastEditTime: 2023-02-16 11:18:54
+ * @LastEditTime: 2023-02-16 14:32:56
  * @FilePath: \vue3-temp\src\components\EarthComponent\app.ts
  * @Description: 整个模型的入口文件
  *
@@ -63,6 +63,7 @@ export default class Earth implements IEarth {
     this.missileData = missileData
 
     this.init()
+    // this.handleWindowResize()
   }
 
   // 初始化渲染
