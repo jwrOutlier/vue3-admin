@@ -32,7 +32,11 @@ class Http {
     )
   }
 
-  get<T>(url: string, params?: T, config?: AxiosRequestConfig): Promise<any> {
+  get<T>(
+    url: string,
+    params?: T,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse> {
     return new Promise((resolve, reject) => {
       axios
         .get(url, {
@@ -48,7 +52,11 @@ class Http {
     })
   }
 
-  post<T>(url: string, data?: T, config?: AxiosRequestConfig): Promise<any> {
+  post<T>(
+    url: string,
+    data?: T,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse> {
     return new Promise((reslove, reject) => {
       axios
         .post(url, data, config)

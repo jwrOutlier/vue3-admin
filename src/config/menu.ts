@@ -1,29 +1,21 @@
-interface menuChildren extends menuOption {}
-interface menuOption<T = menuChildren> {
-  key: string
-  label: string
-  icon?: string
-  children?: T[]
-}
-
-export const adminMenu: menuOption[] = [
+export const adminMenu: Menu.menuOption[] = [
   {
-    key: 'compont1',
-    label: '组件',
+    key: '/workbench',
+    label: '工作台',
     icon: '',
   },
   {
-    key: 'compont2',
-    label: '组件',
+    key: '/customCom',
+    label: '自定义组件',
     icon: '',
   },
   {
-    key: 'compont3',
-    label: '组件',
+    key: '/richText',
+    label: '富文本编辑器',
     icon: '',
   },
   {
-    key: 'compont4',
+    key: 'richText',
     label: '组件',
     icon: '',
     children: [

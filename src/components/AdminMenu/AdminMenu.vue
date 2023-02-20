@@ -1,16 +1,17 @@
 <template>
   <el-menu
     class="elmenu"
-    active-text-color="#ffd04b"
-    background-color="green"
-    default-active="2"
-    text-color="#fff">
+    active-text-color="rgb(2, 221, 182)"
+    background-color="#fff"
+    default-active="/workbench"
+    text-color="#065b48"
+    router>
     <template v-for="item in adminMenu" :key="item.key">
       <el-sub-menu :index="item.key" v-if="item.children">
         <template #title>
           <span>{{ item.label }}</span>
         </template>
-        <el-menu-item :index="i.key" v-for="i in item.children">
+        <el-menu-item :index="i.key" v-for="i in item.children" :key="i.key">
           {{ i.label }}
         </el-menu-item>
       </el-sub-menu>
