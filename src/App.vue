@@ -1,20 +1,9 @@
 <template>
-  <div class="APP">
-    <!-- <EarthComponent /> -->
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
-<script lang="ts" setup>
-import EarthComponent from './components/EarthComponent/EarthComponent.vue'
-</script>
-<style scoped lang="scss">
-.APP {
-  background-color: aliceblue;
-}
-</style>
+<script lang="ts" setup></script>
+
 <style lang="scss">
-.APP {
-  min-height: 100vh;
-}
+@import '@/assets/base.scss';
 </style>

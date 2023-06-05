@@ -1,14 +1,15 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import 'element-plus/dist/index.css'
-import useThirdComponent from '@/config/third_module_component'
-import App from './App.vue'
-import router from './router'
-const app = createApp(App)
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import 'element-plus/dist/index.css';
+import useThirdComponent from '@/config/third_module_component';
+import App from './App.vue';
+import router from './router';
 
-useThirdComponent(app)
+const app = createApp(App);
 
-app.use(createPinia())
-app.use(router)
+useThirdComponent(app);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+
+app.mount('#app');
