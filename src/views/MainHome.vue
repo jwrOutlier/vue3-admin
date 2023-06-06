@@ -1,9 +1,9 @@
 <template>
   <div class="main-home">
-    <section>
+    <section v-for="item in 5" :key="item">
       <ListTitle title="推荐" />
       <ul class="list">
-        <li class="list-item">
+        <li class="list-item" v-for="i in 10" :key="i">
           <img src="@/assets/images/login_bg.webp" alt="" />
           <div class="r">
             <p>xxxx</p>
@@ -24,7 +24,11 @@ import ListTitle from '@/components/ListTitle.vue';
   position: relative;
   height: 100%;
   section {
+    margin-bottom: 10px;
     .list {
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      gap: 10px 15px;
       .list-item {
         display: flex;
         align-items: center;
